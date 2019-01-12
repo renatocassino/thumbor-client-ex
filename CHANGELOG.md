@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.5.0] - 2019-01-12
 ### Added
-- Manual crop
+- Manual crop [@ivanpetrovic]
 
 ## [0.4.0] - 2018-05-05
 ### Added
