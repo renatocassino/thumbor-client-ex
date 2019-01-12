@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/globocom/thumbor-client-ex.svg?branch=master)](https://travis-ci.org/globocom/thumbor-client-ex) [![HitCount](http://hits.dwyl.io/globocom/thumbor-client-ex.svg)](http://hits.dwyl.io/globocom/thumbor-client-ex)
+[![Build Status](https://travis-ci.org/tacnoman/thumbor-client-ex.svg?branch=master)](https://travis-ci.org/tacnoman/thumbor-client-ex) [![HitCount](http://hits.dwyl.io/tacnoman/thumbor-client-ex.svg)](http://hits.dwyl.io/globocom/thumbor-client-ex)
 
 # ThumborClient
 
