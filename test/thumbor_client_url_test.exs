@@ -9,7 +9,7 @@ defmodule ThumborClientUrlBuilderTest do
   end
 
   test "#full_path with size, crop and image" do
-    assert UrlBuilder.full_path(%{width: 200, height: 300, crop: [10,10,10,10], image: "my-image.jpg"}) == "200x300/10x10:10x10/my-image.jpg"
+    assert UrlBuilder.full_path(%{width: 200, height: 300, crop: [10,10,10,10], image: "my-image.jpg"}) == "10x10:10x10/200x300/my-image.jpg"
   end
 
   test "#full_path with size, image and smart" do
@@ -17,7 +17,7 @@ defmodule ThumborClientUrlBuilderTest do
   end
 
   test "#full_path with size, crop, image and smart" do
-    assert UrlBuilder.full_path(%{width: 200, height: 300, crop: [10,10,10,10], smart: true, image: "my-image.jpg"}) == "200x300/10x10:10x10/smart/my-image.jpg"
+    assert UrlBuilder.full_path(%{width: 200, height: 300, crop: [10,10,10,10], smart: true, image: "my-image.jpg"}) == "10x10:10x10/200x300/smart/my-image.jpg"
   end
 
   test "#trim without parameter" do
