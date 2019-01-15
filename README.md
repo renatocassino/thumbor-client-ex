@@ -11,7 +11,7 @@ The package can be installed by adding `thumbor_client` to your list of dependen
 ```elixir
 def deps do
   [
-    {:thumbor_client, "~> 0.4.0"}
+    {:thumbor_client, "~> 0.5.0"}
   ]
 end
 ```
@@ -48,15 +48,16 @@ iex> ThumborClient.generate(%{image: "image.jpg", width: 500, height: 500}, "my_
 
 |      Option       | Default Value |                                                                                               Description                                                                                               |
 |-------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| trim: (bool)      | false         | Removes surrounding space in image using top-left pixel color unless specified otherwise                                                                                                               |
+| trim: (bool)      | false         | Removes surrounding space in image using top-left pixel color unless specified otherwise                                                                                                                |
+| crop: (list)      | nil           | Manually crop the image using the coordinates from the top-left and bottom-right corner of the cropping rectangle                                                                                       |
 | meta: (bool)      | false         | Instead of get the image, get all meta data informations in image returning using json                                                                                                                  |
-| fit: (atom\|nil)   | nil           | The fit argument specifies that the image should not be auto-cropped and auto-resized to be EXACTLY the specified size. Possible values: :fit_in, :adaptive_fit_in, :full_fit_in, :adaptive_full_fit_in |
+| fit: (atom\|nil)  | nil           | The fit argument specifies that the image should not be auto-cropped and auto-resized to be EXACTLY the specified size. Possible values: :fit_in, :adaptive_fit_in, :full_fit_in, :adaptive_full_fit_in |
 | width: (integer)  | 0             | Final width of image                                                                                                                                                                                    |
 | height: (integer) | 0             | Final height of image                                                                                                                                                                                   |
 | flip: (bool)      | false         | Flip image horizontaly                                                                                                                                                                                  |
 | flop: (bool)      | false         | Flip image verticaly                                                                                                                                                                                    |
-| halign: (atom)    | :center       | Orientation to crop horizontaly. Possible values: `:left`, `:center`, `:right`                                                                                                                                |
-| valign: (atom)    | :center       | Orientation to crop verticaly. Possible values: `:top`, `:center`, `:bottom`                                                                                                                                  |
+| halign: (atom)    | :center       | Orientation to crop horizontaly. Possible values: `:left`, `:center`, `:right`                                                                                                                          |
+| valign: (atom)    | :center       | Orientation to crop verticaly. Possible values: `:top`, `:center`, `:bottom`                                                                                                                            |
 | smart: (bool)     | false         | Use Thumbor algorithms to crop using facial recognition process                                                                                                                                         |
 | filters: (list)   | []            | Adding filters to image. More details bellow                                                                                                                                                            |
 | image: (string)   | nil           | Path of image. Can be external.                                                                                                                                                                         |
