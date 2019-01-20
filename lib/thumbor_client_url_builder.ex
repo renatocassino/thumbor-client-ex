@@ -9,10 +9,10 @@ defmodule ThumborClient.UrlBuilder do
   def full_path(options) do
     []
     |> trim(options)
+    |> crop(options)
     |> meta(options)
     |> fit_in(options)
     |> sizes(options)
-    |> crop(options)
     |> align(options, :halign)
     |> align(options, :valign)
     |> smart(options)
